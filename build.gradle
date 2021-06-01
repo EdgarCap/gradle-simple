@@ -1,3 +1,15 @@
+plugins {
+  id "org.sonarqube" version "3.2.0"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "EdgarCap_gradle-simple"
+    property "sonar.organization", "edgarcap"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 apply plugin: 'java'
 apply plugin: 'maven'
 plugins {
