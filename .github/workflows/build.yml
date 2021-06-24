@@ -34,9 +34,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./gradlew build sonarqube --info
-  copy:
-    name: Copy     
-    runs-on: test
-    steps:
-       - run: cp .src/main/java/ /home/ec2-user/actions-runner
+
 
